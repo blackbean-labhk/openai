@@ -14,6 +14,10 @@ if (!apiKey) {
   process.exit(1);
 }
 
+app.get('/', (req, res) => {
+  res.send('Greeting to Cyclic.sh');
+})
+
 const openai = new OpenAI({
     apiKey,
 });
